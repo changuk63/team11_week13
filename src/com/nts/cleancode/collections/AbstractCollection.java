@@ -30,6 +30,4 @@ public abstract class AbstractCollection{
 	public abstract boolean contains(Object element);
 	public abstract int size();
 	
-	public void add(Object key, Object value) {
-	}
 }
