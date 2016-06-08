@@ -1,13 +1,6 @@
 package com.nts.cleancode.collections;
 
 public class List extends AbstractCollection {
-	public boolean contains(Object element) {
-		for (int i=0; i<size; i++) 
-			if (elements[i].equals(element))
-				return true;
-		return false;
-	}
-
 	public boolean remove(Object element) {
 		if (readOnly)
 			return false;

@@ -14,8 +14,6 @@ public abstract class AbstractCollection{
 	}
 	
 	public abstract boolean remove(Object element);
-	public abstract boolean contains(Object element);
-	
 	public boolean isEmpty() {
 		return size == 0;
 	}
@@ -60,6 +58,13 @@ public abstract class AbstractCollection{
 		for (int i = 0 ; i < size ; i++)
 			newElements[i] = elements[i];
 		elements = newElements;
+	}
+
+	public boolean contains(Object element) {
+		for (int i=0; i<size; i++) 
+			if (elements[i].equals(element))
+				return true;
+		return false;
 	}
 	
 	

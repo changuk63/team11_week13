@@ -42,14 +42,6 @@ public class Map extends AbstractCollection {
 		return false;
 	}
 
-	public boolean contains(Object value) {
-		for (int i = 0; i < size; i++)
-			if ((value == null && values[i] == null)
-				|| (values[i] != null && values[i].equals(value)))
-				return true;
-		return false;
-	}
-
 	public boolean containsKey(Object key) {
 		for (int i = 0; i < size; i++)
 			if (keys[i] != null && keys[i].equals(key)) {
