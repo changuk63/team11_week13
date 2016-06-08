@@ -1,6 +1,6 @@
 package com.nts.cleancode.collections;
 
-public abstract class AbstractCollection implements Collection {
+public abstract class AbstractCollection{
 	public void addAll(AbstractCollection c) {
 		if (c instanceof Set) {
 			Set s = (Set)c;
@@ -23,6 +23,12 @@ public abstract class AbstractCollection implements Collection {
 				add(m.keys[i], m.values[i]);			
 		}
 	}
+	
+	public boolean isEmpty();
+	public void add(Object element);
+	public boolean remove(Object element);
+	public boolean contains(Object element);
+	public int size();
 	
 	public void add(Object key, Object value) {
 	}
