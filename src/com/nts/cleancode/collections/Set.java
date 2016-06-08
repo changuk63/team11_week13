@@ -3,12 +3,7 @@ package com.nts.cleancode.collections;
 public class Set extends AbstractCollection {
 	private static int INITIAL_CAPACITY = 10;
 	private Object[] elements = new Object[INITIAL_CAPACITY];
-	private int size = 0;
 	private boolean readOnly;
-
-	public boolean isEmpty() {
-		return size == 0;
-	}
 
 	public void add(Object element) {
 		if (!readOnly) {
