@@ -12,9 +12,6 @@ public class Map extends AbstractCollection {
 		return size == 0;
 	}
 
-	// Do nothing because user must input key and value
-	public void add(Object element) {
-	}
 
 	public void add(Object key, Object value) {
 		if (!readOnly) {
