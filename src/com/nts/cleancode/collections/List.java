@@ -22,6 +22,18 @@ public class List extends AbstractCollection {
 			elements[size++] = element;
 		}
 	}
+	
+	private boolean shouldGrow(){
+		return (size + 1) > elements.length;
+	}
+	
+	private void grow(){
+		Object[] newElements =
+				new Object[elements.length + 10];
+		for (int i = 0 ; i < size ; i++)
+			newElements[i] = elements[i];
+		elements = newElements;
+	}
 
 	public boolean contains(Object element) {
 		for (int i=0; i<size; i++) 
