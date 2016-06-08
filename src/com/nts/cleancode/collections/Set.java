@@ -2,7 +2,6 @@ package com.nts.cleancode.collections;
 
 public class Set extends AbstractCollection {
 	private static int INITIAL_CAPACITY = 10;
-	private Object[] elements = new Object[INITIAL_CAPACITY];
 	private boolean readOnly;
 
 	public void add(Object element) {
@@ -27,10 +26,6 @@ public class Set extends AbstractCollection {
 			if (elements[i].equals(element))
 				return true;
 		return false;
-	}
-
-	public int size() {
-		return size;
 	}
 
 	public boolean remove(Object element) {
@@ -61,10 +56,6 @@ public class Set extends AbstractCollection {
 			if (!contains(l.get(i)))
 				elements[size++] = l.get(i);
 		}
-	}
-
-	public int capacity() {
-		return elements.length;
 	}
 
 	public void setReadOnly(boolean b) {

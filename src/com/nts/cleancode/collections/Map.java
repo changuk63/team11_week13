@@ -31,10 +31,6 @@ public class Map extends AbstractCollection {
 		}
 	}
 
-	public int size() {
-		return size;
-	}
-
 	public boolean remove(Object key) {
 		if (readOnly)
 			return false;
@@ -69,10 +65,6 @@ public class Map extends AbstractCollection {
 		if (!containsKey(key))
 			return null;
 		return values[indexWhereKeyFound];
-	}
-
-	public int capacity() {
-		return keys.length;
 	}
 
 	public void setReadOnly(boolean b) {

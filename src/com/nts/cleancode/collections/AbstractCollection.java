@@ -2,6 +2,7 @@ package com.nts.cleancode.collections;
 
 public abstract class AbstractCollection{
 	protected int size = 0;
+	protected Object[] elements = new Object[10];
 	public void addAll(AbstractCollection c) {
 		if (c instanceof Set) {
 			Set s = (Set)c;
@@ -27,10 +28,16 @@ public abstract class AbstractCollection{
 	
 	public abstract boolean remove(Object element);
 	public abstract boolean contains(Object element);
-	public abstract int size();
-
 	public boolean isEmpty() {
 		return size == 0;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public int capacity() {
+		return elements.length;
 	}
 	
 	

@@ -1,7 +1,6 @@
 package com.nts.cleancode.collections;
 
 public class List extends AbstractCollection {
-	private Object[] elements = new Object[10];
 	private boolean readOnly;
 
 	public void add(Object element) {
@@ -36,10 +35,6 @@ public class List extends AbstractCollection {
 		return false;
 	}
 
-	public int size() {
-		return size;
-	}
-
 	public boolean remove(Object element) {
 		if (readOnly)
 			return false;
@@ -62,10 +57,6 @@ public class List extends AbstractCollection {
 	
 	public Object get(int i) {
 		return elements[i];
-	}
-
-	public int capacity() {
-		return elements.length;
 	}
 
 	public void set(int i, Object value) {
