@@ -82,4 +82,8 @@ public class Map extends AbstractCollection {
 	public int capacity(){
 		return keys.length;
 	}
+	
+	public void setReadOnly(boolean b){
+		readOnly = b;
+	}
 }
