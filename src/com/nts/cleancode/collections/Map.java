@@ -5,6 +5,12 @@ public class Map extends AbstractCollection {
 	protected Object[] keys = new Object[INITIAL_CAPACITY];
 	protected Object[] values = new Object[INITIAL_CAPACITY];
 	private int indexWhereKeyFound;
+	private int size = 0;
+	private boolean readOnly;
+	
+	public boolean isEmpty(){
+		return size == 0;
+	}
 	public void add(Object key, Object value) {
 		if (!readOnly) {
 			for (int i = 0; i < size; i++)
@@ -27,6 +33,11 @@ public class Map extends AbstractCollection {
 			values[size] = value;
 			size++;
 		}
+	}
+	
+	public void addAll(Map m) {
+		for (int i = 0; i < m.size(); i++)
+			add(m.keys[i], m.values[i]);
 	}
 	
 	public boolean contains(Object value){
