@@ -2,6 +2,7 @@ package com.nts.cleancode.collections;
 
 public class Set extends AbstractCollection {
 	private static int INITIAL_CAPACITY = 10;
+	
 	public boolean contains(Object element) {
 		for (int i = 0; i < size; i++)
 			if (elements[i].equals(element))

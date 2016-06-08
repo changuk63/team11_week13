@@ -5,25 +5,10 @@ public abstract class AbstractCollection{
 	protected Object[] elements = new Object[10];
 	protected boolean readOnly;
 	public void addAll(AbstractCollection c) {
-		if (c instanceof Set) {
-			Set s = (Set)c;
-			for (int i=0; i < s.size(); i++) {
-				if (!contains(s.getElementAt(i))) {
-					add(s.getElementAt(i));
-				}
+		for (int i=0; i < c.size(); i++) {
+			if (!contains(c.get(i))) {
+				add(c.get(i));
 			}
-			
-		} else if (c instanceof List) {
-			AbstractCollection l = (AbstractCollection)c;
-			for (int i=0; i < l.size(); i++) {
-				if (!contains(l.get(i))) {
-					add(l.get(i));
-				}
-			}
-		} else if (c instanceof Map) {
-			Map m = (Map)c;
-			for (int i=0; i<m.size(); i++) 
-				add(m.keys[i], m.values[i]);			
 		}
 	}
 	
