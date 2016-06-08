@@ -15,11 +15,15 @@ public class List extends AbstractCollection {
 		if (shouldGrow())
 			grow();
 		
-		addElements(element);
+		addElement(element);
 	}
 	
 	private boolean shouldGrow(){
 		return (size + 1) > elements.length;
+	}
+	
+	private void addElement(Object element){
+		elements[size++] = element;
 	}
 	
 	private void grow(){
