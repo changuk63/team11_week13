@@ -28,7 +28,14 @@ public class Map extends AbstractCollection {
 			size++;
 		}
 	}
-
+	
+	public boolean contains(Object value){
+		for(int i = 0 ; i < size ; i++)
+			if ((value == null && values[i] == null)
+					|| (values[i] != null && values[i].equals(value)))
+				return true;
+		return false;
+	}
 	public boolean remove(Object key) {
 		if (readOnly)
 			return false;
