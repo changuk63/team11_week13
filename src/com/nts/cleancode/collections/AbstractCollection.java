@@ -24,11 +24,11 @@ public abstract class AbstractCollection{
 		}
 	}
 	
-	public boolean isEmpty();
-	public void add(Object element);
-	public boolean remove(Object element);
-	public boolean contains(Object element);
-	public int size();
+	public abstract boolean isEmpty();
+	public abstract void add(Object element);
+	public abstract boolean remove(Object element);
+	public abstract boolean contains(Object element);
+	public abstract int size();
 	
 	public void add(Object key, Object value) {
 	}
