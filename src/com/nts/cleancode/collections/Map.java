@@ -40,6 +40,10 @@ public class Map extends AbstractCollection {
 			add(m.keys[i], m.values[i]);
 	}
 	
+	public int size(){
+		return size;
+	}
+	
 	public boolean contains(Object value){
 		for(int i = 0 ; i < size ; i++)
 			if ((value == null && values[i] == null)
@@ -73,5 +77,9 @@ public class Map extends AbstractCollection {
 		if (!containsKey(key))
 			return null;
 		return values[indexWhereKeyFound];
+	}
+	
+	public int capacity(){
+		return keys.length;
 	}
 }
