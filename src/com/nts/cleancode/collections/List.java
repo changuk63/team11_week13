@@ -1,8 +1,6 @@
 package com.nts.cleancode.collections;
 
 public class List extends AbstractCollection {
-	private boolean readOnly;
-
 	public void add(Object element) {
 		if (readOnly)
 			return;
@@ -55,19 +53,11 @@ public class List extends AbstractCollection {
 		return false;
 	}
 	
-	public Object get(int i) {
-		return elements[i];
-	}
-
 	public void set(int i, Object value) {
 		if (!readOnly) {
 			if (i >= size)
 				throw new ArrayIndexOutOfBoundsException();
 			elements[i] = value;
 		}
-	}
-
-	public void setReadOnly(boolean b) {
-		readOnly = b;
 	}
 }

@@ -5,8 +5,6 @@ public class Map extends AbstractCollection {
 	protected Object[] keys = new Object[INITIAL_CAPACITY];
 	protected Object[] values = new Object[INITIAL_CAPACITY];
 	private int indexWhereKeyFound;
-	private boolean readOnly;
-
 	public void add(Object key, Object value) {
 		if (!readOnly) {
 			for (int i = 0; i < size; i++)
@@ -65,9 +63,5 @@ public class Map extends AbstractCollection {
 		if (!containsKey(key))
 			return null;
 		return values[indexWhereKeyFound];
-	}
-
-	public void setReadOnly(boolean b) {
-		readOnly = b;
 	}
 }
