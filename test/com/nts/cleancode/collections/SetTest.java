@@ -103,7 +103,7 @@ public class SetTest {
 
 	@Test
 	public void expandability() {
-		Set expandableSet = new Set();
+		AbstractCollection expandableSet = new Set();
 		assertEquals(10, expandableSet.capacity());
 		for (int i = 0; i < 11; i++)
 			expandableSet.add(i);

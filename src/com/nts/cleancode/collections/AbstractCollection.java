@@ -66,6 +66,10 @@ public abstract class AbstractCollection{
 				return true;
 		return false;
 	}
+
+	public Object getElementAt(int index) {
+		return elements[index];
+	}
 	
 	
 }

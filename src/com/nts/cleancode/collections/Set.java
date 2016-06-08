@@ -22,10 +22,6 @@ public class Set extends AbstractCollection {
 		return false;
 	}
 
-	public Object getElementAt(int index) {
-		return elements[index];
-	}
-
 	public void addAll(AbstractCollection l) {
 		for (int i = 0; i < l.size(); i++) {
 			if (!contains(l.get(i)))
