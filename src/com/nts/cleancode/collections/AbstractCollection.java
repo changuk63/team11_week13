@@ -4,10 +4,11 @@ public abstract class AbstractCollection{
 	protected int size = 0;
 	protected Object[] elements = new Object[10];
 	protected boolean readOnly;
-	public void addAll(AbstractCollection c) {
-		for (int i=0; i < c.size(); i++) {
-			if (!contains(c.get(i))) {
-				add(c.get(i));
+	
+	public void addAll(AbstractCollection collection) {
+		for (int i=0; i < collection.size(); i++) {
+			if (!contains(collection.get(i))) {
+				add(collection.get(i));
 			}
 		}
 	}
