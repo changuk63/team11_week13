@@ -3,7 +3,7 @@ package com.nts.cleancode.collections;
 public abstract class AbstractCollection{
 	private static int INITIAL_CAPACITY = 10;
 	protected int size = 0;
-	protected Object[] elements = new Object[10];
+	protected Object[] elements = new Object[INITIAL_CAPACITY];
 	protected boolean readOnly;
 	
 	public void addAll(AbstractCollection collection) {
